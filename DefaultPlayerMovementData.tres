@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PlayerMovementData" load_steps=2 format=3 uid="uid://cxa5jbs8oo1b0"]
+
+[ext_resource type="Script" path="res://player_movement_data.gd" id="1_cyryj"]
+
+[resource]
+script = ExtResource("1_cyryj")
+speed = 90.0
+jump_velocity = -270.0
+acceleration = 300.0
+friction = 540.0
+min_jump_velocity = -30.0
+max_jumps = 2
+dash_velocity = 270.0

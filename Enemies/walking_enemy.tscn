@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://ijb5dmp076fm"]
 
-[ext_resource type="Script" path="res://walking_enemy.gd" id="1_liabs"]
+[ext_resource type="Script" path="res://Enemies/walking_enemy.gd" id="1_liabs"]
 [ext_resource type="Texture2D" uid="uid://ps4sfur5ahxw" path="res://characters_packed.png" id="1_mx6u0"]
 [ext_resource type="PackedScene" uid="uid://cqx85hj8cdrtg" path="res://hitbox.tscn" id="3_dvbhb"]
 

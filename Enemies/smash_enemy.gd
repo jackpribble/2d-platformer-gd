@@ -19,6 +19,10 @@ var state = HOVER
 @onready var timer = $Timer
 @onready var gpu_particles_2d = $GPUParticles2D
 
+func _ready():
+	add_to_group("Enemies")
+
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	match state:

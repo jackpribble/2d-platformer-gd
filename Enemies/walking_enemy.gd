@@ -10,6 +10,9 @@ var direction = Vector2.RIGHT
 @onready var ledge_check = $LedgeCheck
 @onready var animated_sprite = $AnimatedSprite2D
 
+func _ready():
+	add_to_group("Enemies")
+
 
 func _physics_process(delta):
 	var found_wall = is_on_wall()

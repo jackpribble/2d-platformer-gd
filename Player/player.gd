@@ -23,9 +23,12 @@ var state = MOVE
 @onready var remote_transform_2d = $RemoteTransform2D
 
 
+func _ready():
+	add_to_group("Players")
+
+
 func _physics_process(delta):
 	var input = Vector2.ZERO
-	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	input.x = Input.get_axis("left", "right")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dyxrd85drwyg7"]
 
-[ext_resource type="Script" path="res://moving_spike_enemy.gd" id="1_hyr21"]
+[ext_resource type="Script" path="res://Enemies/moving_spike_enemy.gd" id="1_hyr21"]
 [ext_resource type="Texture2D" uid="uid://ps4sfur5ahxw" path="res://characters_packed.png" id="1_xsf7l"]
 [ext_resource type="PackedScene" uid="uid://cqx85hj8cdrtg" path="res://hitbox.tscn" id="2_b7ygw"]
 

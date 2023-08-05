@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://c4ojowk3mh2b6"]
 
 [ext_resource type="Texture2D" uid="uid://ps4sfur5ahxw" path="res://characters_packed.png" id="1_scxd8"]
-[ext_resource type="Script" path="res://player.gd" id="1_warbg"]
-[ext_resource type="Resource" uid="uid://cxa5jbs8oo1b0" path="res://DefaultPlayerMovementData.tres" id="2_oxvxx"]
+[ext_resource type="Script" path="res://Player/player.gd" id="1_warbg"]
+[ext_resource type="Resource" uid="uid://cxa5jbs8oo1b0" path="res://Player/DefaultPlayerMovementData.tres" id="2_oxvxx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w2io2"]
 atlas = ExtResource("1_scxd8")
@@ -54,6 +54,7 @@ animations = [{
 size = Vector2(12, 17)
 
 [node name="Player" type="CharacterBody2D"]
+z_index = 10
 collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_warbg")

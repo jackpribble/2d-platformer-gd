@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://dwpn001v2ggiu"]
 
-[ext_resource type="Script" path="res://world.gd" id="1_365cm"]
+[ext_resource type="Script" path="res://level.gd" id="1_y7d5x"]
 [ext_resource type="PackedScene" uid="uid://c4ojowk3mh2b6" path="res://player.tscn" id="2_8e7nx"]
 [ext_resource type="PackedScene" uid="uid://dio0wp75rhwtj" path="res://tile_map.tscn" id="2_h88al"]
 [ext_resource type="PackedScene" uid="uid://bmyg21c20q6jt" path="res://checkpoint.tscn" id="2_slhee"]
@@ -22,7 +22,7 @@ _data = {
 point_count = 2
 
 [node name="World" type="Node2D"]
-script = ExtResource("1_365cm")
+script = ExtResource("1_y7d5x")
 
 [node name="Checkpoint" parent="." instance=ExtResource("2_slhee")]
 position = Vector2(171, 72)

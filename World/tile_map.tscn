@@ -6,12 +6,21 @@
 texture = ExtResource("1_ecoyi")
 texture_region_size = Vector2i(18, 18)
 7:2/0 = 0
-7:2/0/terrain_set = 0
+7:2/0/terrain_set = 2
+7:2/0/terrain = 0
 7:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 7:2/0/physics_layer_0/angular_velocity = 0.0
 7:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, -9, 9, 9, 9, 9, -9)
 7:2/0/physics_layer_1/linear_velocity = Vector2(0, 0)
 7:2/0/physics_layer_1/angular_velocity = 0.0
+7:2/0/terrains_peering_bit/right_side = 0
+7:2/0/terrains_peering_bit/bottom_right_corner = 0
+7:2/0/terrains_peering_bit/bottom_side = 0
+7:2/0/terrains_peering_bit/bottom_left_corner = 0
+7:2/0/terrains_peering_bit/left_side = 0
+7:2/0/terrains_peering_bit/top_left_corner = 0
+7:2/0/terrains_peering_bit/top_side = 0
+7:2/0/terrains_peering_bit/top_right_corner = 0
 0:0/0 = 0
 0:0/0/terrain_set = 0
 0:0/0/terrain = 0
@@ -331,6 +340,9 @@ terrain_set_0/terrain_0/color = Color(0.713726, 0, 0.286275, 1)
 terrain_set_1/mode = 0
 terrain_set_1/terrain_0/name = "Ladders"
 terrain_set_1/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
+terrain_set_2/mode = 0
+terrain_set_2/terrain_0/name = "Blocks"
+terrain_set_2/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 sources/1 = SubResource("TileSetAtlasSource_anu7x")
 
 [node name="TileMap" type="TileMap"]

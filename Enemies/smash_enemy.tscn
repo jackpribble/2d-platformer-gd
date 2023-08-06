@@ -1,8 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://c8l4ujet6km24"]
+[gd_scene load_steps=12 format=3 uid="uid://c8l4ujet6km24"]
 
 [ext_resource type="Script" path="res://Enemies/smash_enemy.gd" id="1_ky1ol"]
 [ext_resource type="Texture2D" uid="uid://ps4sfur5ahxw" path="res://characters_packed.png" id="1_wugeg"]
-[ext_resource type="PackedScene" uid="uid://cqx85hj8cdrtg" path="res://hitbox.tscn" id="2_452n3"]
+[ext_resource type="PackedScene" uid="uid://cqx85hj8cdrtg" path="res://Hitboxes/hitbox.tscn" id="2_452n3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_biquq"]
 atlas = ExtResource("1_wugeg")
@@ -32,7 +32,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jep2x"]
-size = Vector2(14, 14)
+size = Vector2(14, 2)
 
 [sub_resource type="Gradient" id="Gradient_6o3nq"]
 offsets = PackedFloat32Array(0, 0.995392)
@@ -55,7 +55,10 @@ orbit_velocity_max = 0.0
 scale_max = 3.0
 color_ramp = SubResource("GradientTexture1D_uayo4")
 
-[node name="SmashEnemy" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oldhv"]
+size = Vector2(16, 16)
+
+[node name="SmashEnemy" type="StaticBody2D"]
 script = ExtResource("1_ky1ol")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -68,11 +71,12 @@ animation = &"Rising"
 position = Vector2(0, -9)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(0, 9)
 shape = SubResource("RectangleShape2D_jep2x")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2(0, -9)
-target_position = Vector2(0, 8)
+target_position = Vector2(0, 9)
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
@@ -84,3 +88,7 @@ process_material = SubResource("ParticleProcessMaterial_8bgvi")
 lifetime = 0.5
 one_shot = true
 explosiveness = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -9)
+shape = SubResource("RectangleShape2D_oldhv")

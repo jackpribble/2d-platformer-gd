@@ -1,4 +1,4 @@
-extends Node2D
+extends StaticBody2D
 
 enum {
 	RISE,
@@ -39,6 +39,9 @@ func hover():
 func rise(delta: float):
 	animated_sprite_2d.play("Rising")
 	position.y = move_toward(position.y, start_position.y, rising_velocity * delta)
+	#velocity.y = rising_velocity
+	
+	#move_and_slide()
 	
 	if position.y == start_position.y:
 		state = HOVER
@@ -47,6 +50,9 @@ func rise(delta: float):
 func fall(delta: float):
 	animated_sprite_2d.play("Falling")
 	position.y += falling_velocity * delta
+	#velocity.y = falling_velocity
+	
+	#move_and_slide()
 	
 	if ray_cast_2d.is_colliding():
 		var collision_point = ray_cast_2d.get_collision_point()
